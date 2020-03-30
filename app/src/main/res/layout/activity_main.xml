@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选择页面" />
+
+            <RadioGroup
+                android:id="@+id/rg_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/tb_pay"
+                    android:checked="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="付款页"/>
+                <RadioButton
+                    android:id="@+id/rb_baidu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="百度"/>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_no_cache_delay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="无缓存+加载完显示"/>
+
+            <Button
+                android:id="@+id/btn_no_cache_no_delay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="无缓存+立即显示" />
+
+            <Button
+                android:id="@+id/btn_cache_delay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="缓存+加载完显示" />
+
+            <Button
+                android:id="@+id/btn_cache_no_delay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="缓存+立即显示" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
